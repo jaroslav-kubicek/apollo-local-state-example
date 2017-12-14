@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, KeyboardAvoidingView } from 'react-native';
 import { Header } from 'react-native-elements';
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
@@ -23,7 +23,13 @@ export default class App extends React.Component {
           />
           <View style={styles.subContainer}>
             <View style={{ flex: 1 }}><TodoList /></View>
-            <View style={{ flexShrink: 1}}><AddTodo /></View>
+            <KeyboardAvoidingView
+              keyboardVerticalOffset={40}
+              behavior='padding'>
+              <View style={{ flexShrink: 1}}>
+                <AddTodo />
+              </View>
+            </KeyboardAvoidingView>
           </View>
         </View>
       </ApolloProvider>
