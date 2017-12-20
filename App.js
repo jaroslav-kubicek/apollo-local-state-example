@@ -26,9 +26,7 @@ export default class App extends React.Component {
             <KeyboardAvoidingView
               keyboardVerticalOffset={40}
               behavior='padding'>
-              <View style={{ flexShrink: 1}}>
-                <AddTodo />
-              </View>
+              <AddTodo />
             </KeyboardAvoidingView>
           </View>
         </View>
